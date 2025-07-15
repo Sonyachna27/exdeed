@@ -1,0 +1,101 @@
+.faq{
+	&__container{
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		justify-content: space-between;
+	@media screen and (min-width:1024px) {
+		flex-direction: row;
+	}	
+	}
+	&__title{
+		h2{
+			@include titleH2;
+			margin-bottom: 10px;
+		}
+		p{
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 140%;
+			@media screen and (min-width:768px) {
+				font-size: 20px;
+			}
+		}
+		@media screen and (min-width:1024px) {
+			width: 30%;
+		}
+	}
+	&__items{
+		@media screen and (min-width:1024px) {
+			width: 59%;
+		}
+	}
+	&__item{
+		padding: 20px 0;
+		border-bottom: .5px solid $--border-color;
+		@media screen and (min-width:768px) {
+			padding: 32px 0;
+		}
+		&.active{
+			.faq-icon-wrapper {
+				background-color: $--black;
+				svg{
+					transform: rotate(180deg);
+					path, rect{
+						stroke: $--white;
+					}
+				}
+			}
+		}
+		&__top{
+		@include p4;
+			display: flex;
+			gap: 20px;
+			align-items: center;
+			justify-content: space-between;
+			transition: .3s linear;
+		
+		}
+&-bottom{
+			@include p2;
+			ul{
+				display: flex;
+				flex-direction: column;
+				gap: 5px;
+				list-style-position: inside;
+				list-style-type: square;
+				margin-bottom: 10px;
+			}
+}
+	}
+	&-icon-wrapper{
+		border-radius: 500px;
+		background-color: transparent;
+		min-width: 32px;
+		min-height: 32px;
+		max-width: 32px;
+		max-height: 32px;
+		position: relative;
+		transition: .3s linear;
+		border: 1px solid $--black;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+			@media screen and (min-width:768px) {
+				min-width: 40px;
+				min-height: 40px;
+				max-width: 40px;
+				max-height: 40px;
+			} 
+
+		svg{
+			width: 13px;
+			height: 13px;
+			transition: .3s linear;
+			
+		}
+	
+	}
+	
+}

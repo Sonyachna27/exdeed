@@ -1,0 +1,24 @@
+.hero{
+	padding: 160px 0;
+	background: url(../images/hero-bg.jpg) center center / cover no-repeat;
+	color: $--white;
+	&__container{
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+		h1{
+			@include titleH1;
+			margin-bottom: 20px;
+			color: $--white;
+		}
+		p{
+			max-width: 600px;
+			width: 100%;
+			text-align: center;
+			@include p1;
+			margin-bottom: 40px;
+		}	
+	}
+}
