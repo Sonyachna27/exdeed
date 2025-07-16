@@ -18,10 +18,6 @@ border-bottom: 1px solid $--Neutral-500;
 		align-items: center;
 		gap: 20px;
 		width: fit-content;
-		@media screen and (min-width:1024px) {
-			justify-content: space-between;
-		}
-
 		nav{
 			 ul{
 				display: flex;
@@ -29,19 +25,14 @@ border-bottom: 1px solid $--Neutral-500;
 				gap: 24px;
 		
 				&:not(.sub-menu){
-					@media screen and (min-width:768px) {
 					flex-direction: row;
-				}
+				
 				}
 				li{
 					position: relative;
-					&:not(.sub-menu li){
-						@media screen and (min-width:768px) {
-							padding: 24px 0;
-						}
-						
-					}
-				
+					&:not(.sub-menu li){					
+							padding: 24px 0;												
+					}				
 					a{
 						position: relative;
 						transition: .3s ease-in-out;					
@@ -53,9 +44,6 @@ border-bottom: 1px solid $--Neutral-500;
 						display: flex;
 						flex-direction: column;
 						position: relative;
-						gap: 28px;
-					
-						@media screen  and (min-width:768px){
 							gap: 10px;
 							align-items: center;
 							flex-direction: row;
@@ -83,7 +71,7 @@ border-bottom: 1px solid $--Neutral-500;
 										border-radius: 8px;
 								}
 						}
-						}
+					
 					}
 				}
 				&.sub-menu{
@@ -92,6 +80,19 @@ border-bottom: 1px solid $--Neutral-500;
 					background: $--white;
 					box-shadow: 0px 4px 12px 0px rgba(16, 10, 41, 0.12);
 					gap: 0;
+					padding: 8px;
+						position: absolute;
+						top: calc(100% + 10px);
+						right: 0;
+						min-width: fit-content;
+						max-width: 240px;
+						visibility: hidden;
+						margin-top: 0px;
+						opacity: 0;
+						max-height: 0;
+						overflow: hidden;
+						will-change: opacity, max-height;
+						transition: opacity 300ms linear, max-height 300ms linear, margin-top 300ms linear;	
 					li{
 						display: flex;
 						gap: 10px;
@@ -113,21 +114,9 @@ border-bottom: 1px solid $--Neutral-500;
 							}
 						}					
 					}
-					@media screen and (min-width:768px) {
-						padding: 8px;
-						position: absolute;
-						top: calc(100% + 10px);
-						right: 0;
-						min-width: fit-content;
-						max-width: 240px;
-						visibility: hidden;
-						margin-top: 0px;
-						opacity: 0;
-						max-height: 0;
-						overflow: hidden;
-						will-change: opacity, max-height;
-						transition: opacity 300ms linear, max-height 300ms linear, margin-top 300ms linear;	
-					}
+					// @media screen and (min-width:768px) {
+						
+					// }
 				}
 			 }
 		}
