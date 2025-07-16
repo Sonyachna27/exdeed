@@ -25,11 +25,16 @@ $--white: #fff;
 $--Neutral-800: #100A29; 
 $--Neutral-700: rgba(16, 10, 41, 0.75);
 $--Neutral-400: rgba(16, 10, 41, 0.04);
+$--Neutral-300: rgba(255, 255, 255, 0.05);
 $--Neutral-500: rgba(16, 10, 41, 0.15);
+$--Neutral-200: rgba(255, 255, 255, 0.20);
+$--Neutral-50: rgba(255, 255, 255, 0.75);
+$--Neutral-100:  rgba(255, 255, 255, 0.50);
 $--blue:#005687;
 $--orange:#FF8368; 
 $--Accent-50: #FFEEE5;
 $--accent-color:#DC3815;
+$--accent-color-light:#FF8368;
 
 
 html.open{
@@ -129,6 +134,9 @@ body{
 .pb-s{
 padding: 80px 0;
 }
+.pb-xs{
+padding: 60px 0;
+}
 
 .center-title{
 	max-width: fit-content;
@@ -144,7 +152,7 @@ padding: 80px 0;
 }
 .simple{
 	display: flex;
-	padding: 8px 16px;
+	padding: 7px 15px;
 	justify-content: center;
 	align-items: center;
 	gap: 8px;
@@ -157,8 +165,34 @@ padding: 80px 0;
 	font-size: 12px;
 	font-style: normal;
 	font-weight: 500;
-	line-height:  133.333%;
+	line-height:  16px;
 	letter-spacing: 0.24px;
 	text-transform: uppercase;
 	margin-bottom: 24px;
+}
+.justify-title{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 24px;
+	h2{
+		@include titleH2;
+		width: 50%;
+	}
+	p{
+		width: calc(50% - 24px);
+		@include p1;
+	}
+}
+.page__title{
+	padding: 64px 0;
+	h1{
+		@include titleH1;
+	}
+}
+blockquote{
+	@include titleH5;
+	max-width: 608px;
+	margin: 0 auto;
+	text-align: center;
 }

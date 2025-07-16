@@ -1,0 +1,37 @@
+.partners{
+	margin-bottom: 120px;
+	&__title{
+	text-align: center;
+	margin-bottom: 64px;
+	h2{
+		@include titleH2;
+		margin-bottom: 24px;
+	}
+	p{
+		max-width: 616px;
+		margin: 0 auto;
+	}
+	}
+	&__items{
+		max-width: 938px;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		gap: 16px;
+		margin: 0 auto;
+	}
+	&__item{
+		width: calc((100% / 3) - 16px);
+		height: 120px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img{
+			max-height: fit-content;
+			max-width: fit-content;
+			width: 100%;
+		}
+	}
+}

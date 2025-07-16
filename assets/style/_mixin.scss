@@ -37,10 +37,19 @@ text-transform: capitalize;
 color: $--Neutral-800;
 }
 @mixin titleH5{
-font-size: 18px;
+font-family: 'Figtree', sans-serif;
+font-size: 22px;
 font-style: normal;
 font-weight: 600;
 line-height: 30px; /* 136.364% */
+text-transform: capitalize;
+color: $--Neutral-800;
+}
+@mixin titleH6{
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 26px; /* 144.444% */
 text-transform: capitalize;
 color: $--Neutral-800;
 }
