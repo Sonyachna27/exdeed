@@ -1,0 +1,25 @@
+.tooltip__wrap{
+	display: flex;
+	gap: 12px;
+	padding: 12px 16px;
+	background-color: $--Neutral-800;
+	color: $--white;
+	border-radius: 4px;
+	max-width: 560px;
+	svg{
+		max-width: 24px;
+		max-height: 24px;
+		width: 100%;
+		height: 100%;
+		min-width: 24px;
+		min-height: 24px;
+	}
+	p{
+		font-size: 14px;
+		color: $--Neutral-50
+	}
+	div{
+		@include p1;
+		color: inherit;
+	}
+}

@@ -1,6 +1,5 @@
 .reviews{
 	background-color: $--Neutral-400;
-	margin-bottom: 100px;
 	&__title{
 		text-align: center;
 		display: flex;
@@ -18,7 +17,7 @@
 		gap: 40px;
 	}
 	&__item{
-		width: calc((100% / 3) - 40px);
+		width: calc((100% / 3) - 27px);
 		display: flex;
 		flex-direction: column;
 		gap: 24px;

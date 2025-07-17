@@ -1,0 +1,119 @@
+.contact{
+	padding-bottom: 60px;
+	&__container{
+		display: flex;
+		gap: 80px;
+	}
+	&__form{
+		width: 68%;
+		h2{
+			@include titleH5;
+			margin-bottom: 16px;
+		}
+		p{
+			margin-bottom: 27px;
+		}
+
+ 		label {
+     font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 20px;
+			color: $--Neutral-800;
+			display: inline-block;
+			margin-bottom: 8px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+			border-radius: 4px;
+			border: 1px solid $--Neutral-500;
+			background: $--Neutral-400;
+			padding: 11px 15px;
+			color: $--Neutral-600;
+			outline: none;
+			&::placeholder{
+				color: $--Neutral-600;
+				opacity: 1;
+			}
+			&:active,
+			&:focus{
+				border: 1.5px solid $--Neutral-800;
+			}
+    }
+
+    .form-row {
+      display: flex;
+      gap: 24px;
+			margin-bottom: 24px;
+    }
+		select, textarea{
+			margin-bottom: 24px;
+		}
+		select{
+			appearance: none;
+			}
+		.select__wrap{
+			position: relative;
+			&:after{
+				content: '';
+				width: 24px;
+				height: 24px;
+				position: absolute;
+				top: 0%;
+				right: 16px;
+				transform: translateY(50%);
+				background: url('../images/chevron-down\ 2.svg') center center / cover no-repeat;
+			}
+		}
+    .form-row > div {
+      flex: 1;
+    }
+
+    textarea {
+      resize: none;
+      height: 200px;
+    }
+	
+
+
+    button:hover {
+      background-color: #2c1c5a;
+    }
+	}
+	&__details{
+		width: 34%;
+		.grey{
+			margin-bottom: 28px;
+		}
+		&__title{
+			@include titleH5;
+			margin-bottom: 16px;
+		}
+	
+		&__call{
+			margin-bottom: 64px;
+			p{
+					margin-bottom: 32px;
+				}
+		}
+		&__address{
+			a, div:not([class]){
+				@include p1;
+			}
+			a{
+				transition: .3s linear;
+				&:hover{
+					color: $--Accent-100;
+				}
+				&:active{
+					color: $--Accent-200;
+				}
+			}
+		}
+	}
+	
+}

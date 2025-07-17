@@ -161,10 +161,12 @@ color: $--white;
 		align-items: center;	
 		position: relative;
 		z-index: 0;
-		padding: 16px 0;
+		padding: 20px 0;
 	
 		p{
 			color: $--Neutral-50;
+			line-height: 20px;
+			font-size: 14px;
 			line-height: 20px;
 			span,strong{
 				color: $--white;
@@ -173,7 +175,8 @@ color: $--white;
 		}
 		nav{
 			@media screen and (min-width:1024px) {
-				width: 25%;
+				width: 21%;
+				width: fit-content;
 			}
 		}
 		ul{
@@ -184,9 +187,9 @@ color: $--white;
 			justify-content: center;
 			li{
 				line-height: 20px;
-					@media screen and (min-width:1024px) {
-						width:max-content;
-					}
+				font-size: 14px;
+				width:max-content;
+				
 					transition: .3s linear;
 					&:hover{
 						color: $--accent-color;

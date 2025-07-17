@@ -44,7 +44,7 @@ border-bottom: 1px solid $--Neutral-500;
 						display: flex;
 						flex-direction: column;
 						position: relative;
-							gap: 10px;
+							gap: 4px;
 							align-items: center;
 							flex-direction: row;
 							
@@ -53,8 +53,8 @@ border-bottom: 1px solid $--Neutral-500;
 								width: 24px;
 								height: 24px;
 								transition: .3s ease-in-out;
-								background: url(../images/arrow-down.svg) center center / 100% no-repeat;
-							
+								background: url(../images/arrow-down.svg) center center / 8px no-repeat;
+								border-radius: 4px;
 							}
 								&:hover{
 								&:after{
@@ -129,6 +129,8 @@ border-bottom: 1px solid $--Neutral-500;
 		gap: 12px;
 		.btn{
 			padding: 7px 15px 7px 31px;
+			font-size: 14px;
+			line-height: 20px;
 		}
 		.btn.secondary-btn{
 			padding: 9px 23px;

@@ -15,12 +15,15 @@
 		}
 		p{
 			&:not(:nth-last-of-type(1)){
-				margin-bottom: 30px;
+				margin-bottom: 29px;
 			}
 		}
 	}
 	&__list{
 		margin-top: auto;
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
 		@media screen and (min-width:1024px) {
 			width: calc(50% - 40px);
 		}

@@ -1,101 +1,151 @@
 .faq{
+	padding: 60px 0 120px;
 	&__container{
-		display: flex;
-		flex-direction: column;
-		gap: 40px;
-		justify-content: space-between;
-	@media screen and (min-width:1024px) {
-		flex-direction: row;
-	}	
+		max-width: 848px;
+		margin: 0 auto;
 	}
 	&__title{
 		h2{
 			@include titleH2;
-			margin-bottom: 10px;
+			margin-bottom: 64px;
+			text-align: center;
 		}
-		p{
-			font-size: 16px;
-			font-style: normal;
-			font-weight: 400;
-			line-height: 140%;
-			@media screen and (min-width:768px) {
-				font-size: 20px;
+			
+	}
+	&__search__wrap{
+		margin-bottom: 24px;
+		form{
+			max-width: 400px;
+				width: 100%;
+			div {
+				position: relative;
+				input{
+					padding: 12px 48px 12px 16px ;
+				border-radius: 4px;
+				border: 1px solid $--Neutral-500;
+				background-color: $--Neutral-400;
+				outline: none;
+				width: 100%;
+				font-size: 16px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 24px;
+					color: $--Neutral-600;
+				&::placeholder{
+					font-size: 16px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 24px;
+					color: $--Neutral-600;
+					opacity: 1;
+				}
+				&:active,
+				&:focus{
+					border-color: $--Neutral-800;
+				}
+				}
+				&:after{
+					content: '';
+					width: 24px;
+					height: 24px;
+					position: absolute;
+					top: 0;
+					right: 16px;
+					transform: translateY(50%);
+					background: url('../images/search\).svg') center center / cover no-repeat;
+				}
 			}
 		}
-		@media screen and (min-width:1024px) {
-			width: 30%;
-		}
-	}
-	&__items{
-		@media screen and (min-width:1024px) {
-			width: 59%;
+		a{
+			display: flex;
+			gap: 8px;
+			align-items: center;
+			width: fit-content;
+			@include p1;
+			color: $--Neutral-800;
+			transition: .3s linear;
+			&:hover{
+				color: $--Accent-100;
+				svg path{
+					fill: $--Accent-100;
+				}
+			}
+			svg{
+				min-width: 24px;
+				height: 24px;
+				path{
+					transition: .3s linear;
+				}
+
+			}
 		}
 	}
 	&__item{
-		padding: 20px 0;
-		border-bottom: .5px solid $--border-color;
-		@media screen and (min-width:768px) {
-			padding: 32px 0;
+		padding: 23px;
+		border-bottom: 1px solid $--Neutral-500;
+		border-right: 1px solid $--Neutral-500;
+		border-left: 1px solid $--Neutral-500;
+		&:nth-of-type(1){
+			border: 1px solid $--Neutral-500;
+		}
+		&:hover{
+			background-color: $--Neutral-400;
 		}
 		&.active{
+			background-color: $--Neutral-400;
 			.faq-icon-wrapper {
-				background-color: $--black;
 				svg{
 					transform: rotate(180deg);
-					path, rect{
-						stroke: $--white;
-					}
+				
 				}
 			}
 		}
 		&__top{
-		@include p4;
 			display: flex;
 			gap: 20px;
 			align-items: center;
 			justify-content: space-between;
 			transition: .3s linear;
-		
+			@include titleH6;
 		}
-&-bottom{
-			@include p2;
-			ul{
-				display: flex;
-				flex-direction: column;
-				gap: 5px;
-				list-style-position: inside;
-				list-style-type: square;
-				margin-bottom: 10px;
+			&-bottom{
+				@include p1;
+				color: $--Neutral-800;
+				&-wrap{
+					display: flex;
+					flex-direction: column;
+					gap: 16px;
+					a{
+						text-decoration: underline;
+						transition: .3s linear;
+						&:hover{
+							color: $--Accent-100;
+						}
+						&:active{
+							color: $--Accent-200;
+						}
+					}
+				}
 			}
-}
 	}
 	&-icon-wrapper{
 		border-radius: 500px;
 		background-color: transparent;
-		min-width: 32px;
-		min-height: 32px;
-		max-width: 32px;
-		max-height: 32px;
+		min-width: 24px;
+		min-height: 24px;
+		max-width: 24px;
+		max-height: 24px;
 		position: relative;
 		transition: .3s linear;
-		border: 1px solid $--black;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-			@media screen and (min-width:768px) {
-				min-width: 40px;
-				min-height: 40px;
-				max-width: 40px;
-				max-height: 40px;
-			} 
-
-		svg{
-			width: 13px;
-			height: 13px;
-			transition: .3s linear;
 			
+		svg{
+			width: 12px;
+			height: 8px;
+			transition: .3s linear;			
 		}
 	
 	}
-	
 }

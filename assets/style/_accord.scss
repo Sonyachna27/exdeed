@@ -26,15 +26,15 @@
 	  }
 	 
 	
-	&-bottom {
+		&-bottom {
 
-		margin-top: 0;
-					opacity: 0;
-					max-height: 0;
-					overflow: hidden;
-					will-change: opacity, max-height;
-					transition: opacity 300ms linear, max-height 300ms linear, margin-top 300ms linear;	
-	}
+			margin-top: 0;
+			opacity: 0;
+			max-height: 0;
+			overflow: hidden;
+			will-change: opacity, max-height;
+			transition: opacity 300ms linear, max-height 300ms linear, margin-top 300ms linear;	
+			}
   }
 
 	.icon-wrapper {
@@ -42,14 +42,13 @@
 		margin-left: auto;
 }
 
-
   .accord-item.active .accord-item-bottom {
 
-					max-height: 5000px;
-					margin-top: 20px;
-					transition: all 200ms linear;
-					will-change: opacity, max-height, margin-top;
-					opacity: 1;
+		max-height: 5000px;
+		margin-top: 24px;
+		transition: all 200ms linear;
+		will-change: opacity, max-height, margin-top;
+		opacity: 1;
   }
 
 
