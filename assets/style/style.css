@@ -92,6 +92,26 @@ button {
   src: url(../fonts/Figtree-Medium.ttf);
   font-weight: 500;
 }
+@font-face {
+  font-family: "PlusJakartaSans-Italic";
+  src: url(../fonts/PlusJakartaSans-Italic.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "PlusJakartaSans";
+  src: url(../fonts/PlusJakartaSans-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "PlusJakartaSans";
+  src: url(../fonts/PlusJakartaSans-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Funnel";
+  src: url(../fonts/Funnel.ttf);
+  font-weight: 500;
+}
 html.open {
   overflow: hidden;
 }
@@ -124,7 +144,7 @@ body {
   max-width: -moz-fit-content;
   max-width: fit-content;
   width: 100%;
-  background-color: #100A29;
+  background-color: #00598C;
   color: #fff;
   font-family: "Figtree", sans-serif;
   font-size: 16px;
@@ -150,6 +170,11 @@ body {
   border-radius: 4px;
   text-decoration: underline;
 }
+.btn.btn-secondary {
+  background-color: #fff;
+  color: #100A29;
+  border-color: rgba(16, 10, 41, 0.15);
+}
 
 .secondary-btn {
   background-color: #fff;
@@ -164,11 +189,11 @@ body {
 }
 
 .accent-btn {
-  background-color: #DC3815;
   color: #fff;
   border-color: transparent;
   padding: 11px 31px;
   border-radius: 4px;
+  font-weight: 400;
 }
 .accent-btn:hover {
   background-color: #100A29;
@@ -184,6 +209,10 @@ body {
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
+}
+
+.pb-l {
+  padding: 140px 0;
 }
 
 .pb-m {
@@ -208,7 +237,7 @@ body {
   align-items: center;
 }
 .center-title h2 {
-  font-family: "Livvic", sans-serif;
+  font-family: "PlusJakartaSans", sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 600;
@@ -247,7 +276,7 @@ body {
   gap: 24px;
 }
 .justify-title h2 {
-  font-family: "Livvic", sans-serif;
+  font-family: "PlusJakartaSans", sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 600;
@@ -263,24 +292,26 @@ body {
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
+  font-family: "Figtree", sans-serif;
 }
 
 .page__title {
   padding: 64px 0;
 }
 .page__title h1 {
-  font-family: "Livvic", sans-serif;
+  font-family: "PlusJakartaSans", sans-serif;
   font-size: 48px;
   font-style: normal;
   font-weight: 600;
   line-height: 60px;
-  letter-spacing: -0.48px;
+  letter-spacing: 2px;
   text-transform: capitalize;
+  letter-spacing: -0.48px;
   color: #100A29;
 }
 
 blockquote {
-  font-family: "Figtree", sans-serif;
+  font-family: "PlusJakartaSans", sans-serif;
   font-size: 22px;
   font-style: normal;
   font-weight: 600;
@@ -314,6 +345,117 @@ blockquote {
   line-height: 40px; /* 125% */
   letter-spacing: -0.32px;
   text-transform: capitalize;
+}
+
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-list {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: 0px 4px 8px 3px #000 26;
+  border-radius: 4px;
+  gap: 0;
+  padding: 8px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  max-width: 240px;
+  visibility: hidden;
+  margin-top: 0px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  will-change: opacity, max-height;
+  transition: opacity 300ms linear, max-height 300ms linear, margin-top 300ms linear;
+  align-items: flex-start;
+}
+
+.dropdown-list ul, .dropdown-list ul a {
+  width: 100%;
+}
+
+.dropdown-list li a {
+  width: -moz-max-content;
+  width: max-content;
+  min-width: 320px;
+  transition: 0.3s ease-in-out;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 10px 12px;
+  width: 100%;
+  border-radius: 4px;
+  display: flex;
+  color: #100a29;
+}
+
+.dropdown-list li:hover a {
+  color: #100a29;
+  background: rgba(16, 10, 41, 0.04);
+}
+
+.dropdown:hover .dropdown-list {
+  z-index: 10;
+  max-height: 5000px;
+  transition: all 300ms linear;
+  will-change: opacity, max-height, margin-top;
+  opacity: 1;
+  visibility: visible;
+  border-radius: 8px;
+  min-width: 200px;
+}
+
+.dropdown svg {
+  transition: all 0.5s;
+}
+
+.dropdown:hover svg {
+  transform: rotate(180deg);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 64px;
+}
+
+.simple-block {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-right: 24px;
+}
+.simple-block div {
+  color: #000;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: -0.32px;
+  text-transform: capitalize;
+  margin-bottom: 24px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.simple-block h3 {
+  font-family: "PlusJakartaSans", sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px; /* 136.364% */
+  text-transform: capitalize;
+  color: #100A29;
+  margin-bottom: 8px;
 }
 
 .accord {
@@ -407,6 +549,7 @@ blockquote {
 .header__menu nav ul li a {
   position: relative;
   transition: 0.3s ease-in-out;
+  font-weight: 500;
 }
 .header__menu nav ul li a:hover {
   color: #DC3815;
@@ -449,10 +592,9 @@ blockquote {
   padding: 8px;
   position: absolute;
   top: calc(100% + 10px);
-  right: 0;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-  max-width: 240px;
+  left: 0;
+  min-width: 320px;
+  max-width: 320px;
   visibility: hidden;
   margin-top: 0px;
   opacity: 0;
@@ -465,6 +607,7 @@ blockquote {
   display: flex;
   gap: 10px;
   align-items: center;
+  white-space: nowrap;
 }
 .header__menu nav ul.sub-menu li a {
   width: -moz-max-content;
@@ -499,42 +642,78 @@ blockquote {
 }
 
 .hero {
-  padding: 160px 0;
-  background: url(../images/hero-bg.jpg) center center/cover no-repeat;
-  color: #fff;
+  background: #FFFBFA;
 }
 .hero__container {
   display: flex;
-  flex-direction: column;
-  text-align: center;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 64px;
 }
-.hero__container h1 {
-  font-family: "Livvic", sans-serif;
+.hero__content {
+  width: calc(50% - 40px);
+  position: relative;
+}
+.hero__content:after {
+  content: "";
+  max-width: 168px;
+  max-height: 53px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 3px;
+  top: 5px;
+  background: url("../images/hero-svg.svg") center center/contain no-repeat;
+  z-index: 0;
+}
+.hero__content h1 {
+  font-family: "PlusJakartaSans", sans-serif;
   font-size: 48px;
   font-style: normal;
   font-weight: 600;
   line-height: 60px;
-  letter-spacing: -0.48px;
+  letter-spacing: 2px;
   text-transform: capitalize;
+  letter-spacing: -0.48px;
   color: #100A29;
-  margin-bottom: 20px;
-  color: #fff;
+  margin-bottom: 24px;
+  color: #100A29;
+  z-index: 1;
+  position: relative;
+  text-wrap-style: balance;
 }
-.hero__container p {
-  max-width: 600px;
-  width: 100%;
-  text-align: center;
-  font-size: 16px;
+.hero__content p {
+  color: rgba(16, 10, 41, 0.75);
+  font-family: "PlusJakartaSans";
+  font-size: 22px;
   font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+}
+.hero__content p:nth-last-of-type(1) {
+  margin-bottom: 64px;
+}
+.hero__content .btn {
   font-weight: 500;
-  line-height: 24px;
-  margin-bottom: 40px;
+}
+.hero__img {
+  width: calc(50% - 32px);
+  max-width: 608px;
+  max-height: 460px;
+  width: 100%;
+  border-radius: 32px 20px 20px 20px;
+}
+.hero__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: inherit;
 }
 
 .about {
   padding-bottom: 0;
+  padding-top: 80px;
 }
 .about__container {
   display: flex;
@@ -546,7 +725,7 @@ blockquote {
   }
 }
 .about__content h2 {
-  font-family: "Livvic", sans-serif;
+  font-family: "PlusJakartaSans", sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 600;
@@ -555,6 +734,7 @@ blockquote {
   text-transform: capitalize;
   color: #100A29;
   margin-bottom: 16px;
+  letter-spacing: 0px;
 }
 .about__content p:not(:nth-last-of-type(1)) {
   margin-bottom: 29px;
@@ -592,7 +772,7 @@ blockquote {
   margin-bottom: 64px;
 }
 .guard__title h2 {
-  font-family: "Livvic", sans-serif;
+  font-family: "PlusJakartaSans", sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 600;
@@ -601,12 +781,14 @@ blockquote {
   text-transform: capitalize;
   color: #100A29;
   margin-bottom: 12px;
+  letter-spacing: 1px;
 }
 .guard__title p {
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
+  font-family: "Figtree", sans-serif;
 }
 .guard__items {
   display: grid;
@@ -643,23 +825,29 @@ blockquote {
   margin-bottom: 24px;
 }
 .guard__item h3 {
-  font-family: "Livvic", sans-serif;
+  font-family: "PlusJakartaSans", sans-serif;
   font-size: 22px;
-  font-style: normal;
   font-weight: 600;
   line-height: 30px; /* 136.364% */
   text-transform: capitalize;
+  color: #100A29;
+  letter-spacing: 1px;
   color: #100A29;
   margin-bottom: 8px;
 }
 
 .risk {
-  background-color: #005687;
+  background: linear-gradient(to right, #005687 0%, #005687 50%, rgba(16, 10, 41, 0.031372549) 50%, rgba(16, 10, 41, 0.031372549) 100%);
   color: #fff;
 }
 .risk__container {
   display: flex;
   justify-content: space-between;
+}
+.risk__container .simple {
+  background: rgba(255, 255, 255, 0.1019607843);
+  border: 1px solid rgba(255, 255, 255, 0.1490196078);
+  color: #fff;
 }
 .risk__content {
   width: calc(50% - 80px);
@@ -679,26 +867,24 @@ blockquote {
 }
 .risk__content div {
   margin-top: auto;
-  font-family: "Livvic", sans-serif;
+  font-family: "Funnel", sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 600;
   line-height: 48px; /* 120% */
-  letter-spacing: -0.4px;
+  letter-spacing: 2px;
   text-transform: capitalize;
-  color: #100A29;
   color: #fff;
   margin-bottom: 10px;
 }
 .risk__content div strong {
-  color: #DC3815;
+  color: #FF8368;
   font-weight: inherit;
 }
 .risk__form {
   width: calc(50% - 80px);
   padding: 40px;
   border-radius: 4px;
-  background-color: #fff;
 }
 .risk__form p {
   color: rgba(16, 10, 41, 0.75);
@@ -733,14 +919,15 @@ blockquote {
 .risk__form form input {
   border-radius: 4px;
   border: 1px solid rgba(16, 10, 41, 0.15);
-  background: rgba(16, 10, 41, 0.04);
+  background: #fff;
   min-height: 48px;
+  padding: 0 15px;
 }
 .risk__form form .btn {
   padding: 11px 29px;
   font-size: 16px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 24px;
 }
 
@@ -748,7 +935,7 @@ blockquote {
   margin-bottom: 56px;
 }
 .solutions__title h2 {
-  font-family: "Livvic", sans-serif;
+  font-family: "PlusJakartaSans", sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 600;
@@ -811,13 +998,14 @@ blockquote {
   gap: 8px;
 }
 .solutions__item__content h3 {
-  font-family: "Figtree", sans-serif;
+  font-family: "PlusJakartaSans", sans-serif;
   font-size: 22px;
   font-style: normal;
   font-weight: 600;
   line-height: 30px; /* 136.364% */
   text-transform: capitalize;
   color: #100A29;
+  font-style: normal;
 }
 
 .reviews {
@@ -831,7 +1019,7 @@ blockquote {
   margin-bottom: 56px;
 }
 .reviews__title h2 {
-  font-family: "Livvic", sans-serif;
+  font-family: "PlusJakartaSans", sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 600;
@@ -852,6 +1040,7 @@ blockquote {
   flex-direction: column;
   gap: 24px;
   height: auto;
+  position: relative;
 }
 .reviews__item__img {
   max-width: 40px;
@@ -859,10 +1048,18 @@ blockquote {
   width: 100%;
   height: 100%;
   aspect-ratio: 1/1;
+  position: absolute;
+  top: -20px;
+  right: -10px;
+}
+.reviews__item__content {
+  padding: 16px 24px;
+  background: rgba(16, 10, 41, 0.0392156863);
 }
 .reviews__item__content span {
   margin-bottom: 8px;
   display: inline-block;
+  font-family: "PlusJakartaSans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
@@ -883,6 +1080,7 @@ blockquote {
   height: 100%;
 }
 .reviews__item__info span {
+  font-family: "PlusJakartaSans", sans-serif;
   color: #100A29;
   font-size: 16px;
   font-style: normal;
@@ -927,7 +1125,7 @@ blockquote {
   padding: 50px 0;
 }
 .promo__content div {
-  font-family: "Livvic", sans-serif;
+  font-family: "PlusJakartaSans", sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 600;
@@ -936,6 +1134,7 @@ blockquote {
   text-transform: capitalize;
   color: #100A29;
   margin-bottom: 12px;
+  letter-spacing: 1px;
 }
 .promo__content p {
   color: rgba(16, 10, 41, 0.75);
@@ -950,9 +1149,9 @@ blockquote {
 }
 
 .footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  background: #100A29;
-  color: #fff;
+  border-top: 1px solid rgba(16, 10, 41, 0.04);
+  background: rgba(16, 10, 41, 0.04);
+  color: #100A29;
 }
 .footer__wrapper {
   display: flex;
@@ -967,7 +1166,6 @@ blockquote {
   width: 100%;
 }
 .footer__info p {
-  color: rgba(255, 255, 255, 0.75);
   margin-bottom: 24px;
 }
 .footer .logo {
@@ -987,17 +1185,16 @@ blockquote {
   width: 100%;
   padding: 12px 48px 12px 16px;
   border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(16, 10, 41, 0.5);
   outline: none;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(16, 10, 41, 0.75);
 }
 .footer__form form input:not([type=submit]) ::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(16, 10, 41, 0.75);
   opacity: 1;
 }
 .footer__form form input:not([type=submit]) ::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(16, 10, 41, 0.75);
   opacity: 1;
 }
 .footer__form form input:not([type=submit]):active, .footer__form form input:not([type=submit]):focus {
@@ -1017,6 +1214,7 @@ blockquote {
   border: none;
   z-index: 1;
   transform: translateY(-50%);
+  cursor: pointer;
 }
 .footer__form form .form__wrap:after {
   content: "";
@@ -1045,6 +1243,9 @@ blockquote {
   max-width: inherit;
   width: inherit;
 }
+.footer__socials a svg path {
+  fill: #004166;
+}
 .footer__container {
   display: flex;
   gap: 40px;
@@ -1064,7 +1265,7 @@ blockquote {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(16, 10, 41, 0.5);
   width: calc(50% - 20px);
 }
 .footer__container nav ul .sub-menu {
@@ -1073,10 +1274,11 @@ blockquote {
   gap: 16px;
 }
 .footer__container nav ul .sub-menu li {
-  color: #fff;
+  color: #100A29;
 }
 .footer__container nav ul .sub-menu li a {
   transition: 0.3s linear;
+  font-weight: 400;
 }
 .footer__container nav ul .sub-menu li a:hover {
   color: #DC3815;
@@ -1087,7 +1289,7 @@ blockquote {
   flex-direction: column;
 }
 .footer__block__title {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(16, 10, 41, 0.5);
 }
 .footer .footer__contacts {
   display: flex;
@@ -1102,7 +1304,15 @@ blockquote {
 .footer .footer__contacts a:hover {
   color: #DC3815;
 }
+.footer__copy {
+  border-top: 1px solid rgba(16, 10, 41, 0.04);
+  background: #100A29;
+}
 .footer__copy__container {
+  max-width: 1320px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1141,6 +1351,8 @@ blockquote {
   font-size: 14px;
   width: -moz-max-content;
   width: max-content;
+  color: #fff;
+  text-decoration: underline;
   transition: 0.3s linear;
 }
 .footer__copy__container ul li:hover {
@@ -1211,6 +1423,7 @@ blockquote {
   gap: 8px;
 }
 .team__item__info span {
+  font-family: "PlusJakartaSans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
@@ -1227,7 +1440,7 @@ blockquote {
   margin-bottom: 64px;
 }
 .partners__title h2 {
-  font-family: "Livvic", sans-serif;
+  font-family: "PlusJakartaSans", sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 600;
@@ -1235,6 +1448,7 @@ blockquote {
   letter-spacing: -0.4px;
   text-transform: capitalize;
   color: #100A29;
+  letter-spacing: 1px;
   margin-bottom: 24px;
 }
 .partners__title p {
@@ -1278,7 +1492,7 @@ blockquote {
   width: 68%;
 }
 .contact__form h2 {
-  font-family: "Figtree", sans-serif;
+  font-family: "PlusJakartaSans", sans-serif;
   font-size: 22px;
   font-style: normal;
   font-weight: 600;
@@ -1306,7 +1520,7 @@ blockquote {
   width: 100%;
   border-radius: 4px;
   border: 1px solid rgba(16, 10, 41, 0.15);
-  background: rgba(16, 10, 41, 0.04);
+  background: #fff;
   padding: 11px 15px;
   color: rgba(16, 10, 41, 0.5);
   outline: none;
@@ -1371,7 +1585,7 @@ blockquote {
   margin-bottom: 28px;
 }
 .contact__details__title {
-  font-family: "Figtree", sans-serif;
+  font-family: "PlusJakartaSans", sans-serif;
   font-size: 22px;
   font-style: normal;
   font-weight: 600;
@@ -1391,6 +1605,7 @@ blockquote {
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
+  font-family: "Figtree", sans-serif;
 }
 .contact__details__address a {
   transition: 0.3s linear;
@@ -1410,7 +1625,7 @@ blockquote {
   margin: 0 auto;
 }
 .faq__title h2 {
-  font-family: "Livvic", sans-serif;
+  font-family: "PlusJakartaSans", sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 600;
@@ -1418,6 +1633,7 @@ blockquote {
   letter-spacing: -0.4px;
   text-transform: capitalize;
   color: #100A29;
+  letter-spacing: 1px;
   margin-bottom: 64px;
   text-align: center;
 }
@@ -1435,7 +1651,7 @@ blockquote {
   padding: 12px 48px 12px 16px;
   border-radius: 4px;
   border: 1px solid rgba(16, 10, 41, 0.15);
-  background-color: rgba(16, 10, 41, 0.04);
+  background-color: #fff;
   outline: none;
   width: 100%;
   font-size: 16px;
@@ -1483,6 +1699,7 @@ blockquote {
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
+  font-family: "Figtree", sans-serif;
   color: #100A29;
   transition: 0.3s linear;
 }
@@ -1523,6 +1740,7 @@ blockquote {
   align-items: center;
   justify-content: space-between;
   transition: 0.3s linear;
+  font-family: "PlusJakartaSans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
@@ -1535,6 +1753,7 @@ blockquote {
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
+  font-family: "Figtree", sans-serif;
   color: #100A29;
 }
 .faq__item-bottom-wrap {
@@ -1597,5 +1816,95 @@ blockquote {
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
+  font-family: "Figtree", sans-serif;
   color: inherit;
+}
+
+.security__title {
+  margin-bottom: 64px;
+}
+
+.presentation {
+  padding: 80px;
+  border: 1px solid rgba(16, 10, 41, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  background-color: #fff;
+}
+.presentation h2 {
+  font-family: "PlusJakartaSans", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 48px; /* 120% */
+  letter-spacing: -0.4px;
+  text-transform: capitalize;
+  color: #100A29;
+}
+.presentation__item {
+  display: flex;
+  gap: 48px;
+  padding: 40px;
+  border: 1px solid rgba(16, 10, 41, 0.15);
+  max-height: 374px;
+  overflow: hidden;
+  justify-content: space-between;
+  height: auto;
+}
+.presentation__item__content {
+  width: calc(50% - 30px);
+  overflow-y: auto;
+}
+.presentation__item__content div {
+  font-family: "Livvic", sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px; /* 136.364% */
+  text-transform: capitalize;
+  margin-bottom: 24px;
+}
+.presentation__item__content p {
+  color: rgba(16, 10, 41, 0.75);
+}
+.presentation__item__content p:not(:nth-last-of-type(1)) {
+  margin-bottom: 30px;
+}
+.presentation__item__img {
+  width: calc(50% - 30px);
+  border-radius: 4px;
+  height: calc(100% + 40px);
+}
+.presentation__item__img img {
+  width: 100%;
+  min-height: 294px;
+  box-shadow: 0 4px 48px 0 rgba(16, 10, 41, 0.08);
+}
+.presentation__wrapper {
+  margin-bottom: 16px;
+}
+.presentation-pagination.swiper-pagination-bullets {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+  bottom: initial;
+  top: initial;
+  left: initial;
+  line-height: normal;
+}
+.presentation-pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: rgba(16, 10, 41, 0.04);
+  background-color: rgba(16, 10, 41, 0.04);
+  border: 1px solid rgba(16, 10, 41, 0.15);
+}
+.presentation-pagination.swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #FF532F;
+  border-color: #FF532F;
 }/*# sourceMappingURL=style.css.map */

@@ -18,7 +18,28 @@
 	src: url(../fonts/Figtree-Medium.ttf);
 	font-weight: 500;
 }
+@font-face {
+  font-family: "PlusJakartaSans-Italic";
+  src: url(../fonts/PlusJakartaSans-Italic.ttf);
+  font-weight: 500;
+}
 
+@font-face {
+  font-family: "PlusJakartaSans";
+  src: url(../fonts/PlusJakartaSans-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "PlusJakartaSans";
+  src: url(../fonts/PlusJakartaSans-SemiBold.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Funnel";
+  src: url(../fonts/Funnel.ttf);
+  font-weight: 500;
+}
 
 
 $--white: #fff;
@@ -38,7 +59,8 @@ $--Accent-100: #FF532F;
 $--accent-color:#DC3815;
 $--accent-color-light:#FF8368;
 $--Accent-200: #D94728;
-
+$--Primary-200: #00598C;
+$--sds-size-space-1600: 64px;
 
 html.open{
 	overflow: hidden;
@@ -69,7 +91,7 @@ body{
 		transition: .3s linear;
 		max-width: fit-content;
 		width: 100%;
-		background-color: $--Neutral-800;
+		background-color: $--Primary-200;
 		color: $--white;
 		font-family: "Figtree", sans-serif;
 		font-size: 16px;
@@ -96,6 +118,11 @@ body{
 		border-radius: 4px;
 		text-decoration: underline;
 	}
+	&.btn-secondary{
+		background-color: $--white;
+  color: $--Neutral-800;
+  border-color: $--Neutral-500;
+	}
 }
 
 .secondary-btn{
@@ -110,11 +137,11 @@ body{
 	}
 }
 .accent-btn{
-	background-color: $--accent-color;
 	color: $--white;
 	border-color: transparent;
 	padding: 11px 31px;
 	border-radius: 4px;
+	font-weight: 400;
 	&:hover{
 		background-color:$--Neutral-800;	
 		border-color: transparent;
@@ -131,6 +158,9 @@ body{
 	}
 }
 
+.pb-l{
+	padding: 140px 0;
+}
 .pb-m{
 	padding: 100px 0;
 }
@@ -150,7 +180,6 @@ padding: 60px 0;
 	align-items: center;
 	h2{
 		@include titleH2;
-	
 	}
 }
 .simple{
@@ -222,3 +251,97 @@ blockquote{
 			letter-spacing: -0.32px;
 			text-transform: capitalize;
 }
+.dropdown {
+	 position: relative;
+	 cursor: pointer;
+}
+ .dropdown-list {
+	 display: flex;
+	 flex-direction: column;
+	 background: #fff;
+	 box-shadow: 0px 4px 8px 3px #000 26;
+	 border-radius: 4px;
+	 gap: 0;
+	 padding: 8px;
+	 position: absolute;
+	 top: calc(100%);
+	 left: 0;
+	 min-width: fit-content;
+	 max-width: 240px;
+	 visibility: hidden;
+	 margin-top: 0px;
+	 opacity: 0;
+	 max-height: 0;
+	 overflow: hidden;
+	 will-change: opacity, max-height;
+	 transition: opacity 300ms linear, max-height 300ms linear, margin-top 300ms linear;
+	 align-items: flex-start;
+}
+ .dropdown-list ul, .dropdown-list ul a {
+	 width: 100%;
+}
+ .dropdown-list li a {
+	 width: -moz-max-content;
+	 width: max-content;
+   min-width: 320px;
+	 transition: 0.3s ease-in-out;
+	 font-size: 14px;
+	 font-style: normal;
+	 font-weight: 400;
+	 line-height: 20px;
+	 padding: 10px 12px;
+	 width: 100%;
+	 border-radius: 4px;
+	 display: flex;
+	 color: #100a29;
+}
+ .dropdown-list li:hover a {
+	 color: #100a29;
+	 background: rgba(16, 10, 41, 0.04);
+}
+ .dropdown:hover .dropdown-list {
+	 z-index: 10;
+	 max-height: 5000px;
+	 transition: all 300ms linear;
+	 will-change: opacity, max-height, margin-top;
+	 opacity: 1;
+	 visibility: visible;
+	 border-radius: 8px;
+	 min-width: 200px;
+}
+ .dropdown svg {
+	 transition: all 0.5s;
+}
+ .dropdown:hover svg {
+	 transform: rotate(180deg);
+}
+.grid{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 40px;
+	margin-bottom: 64px;
+}
+ .simple-block{
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	padding-right: 24px;
+	div{
+	color: #000;
+	text-align: center;
+	font-family: 'Inter';
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 40px; 
+	letter-spacing: -0.32px;
+	text-transform: capitalize;
+	margin-bottom: 24px;
+	width: fit-content;
+	}
+	h3{
+		@include titleH5;
+		margin-bottom: 8px;
+	}
+
+ }

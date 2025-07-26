@@ -1,15 +1,16 @@
 @mixin titleH1{
-	font-family: 'Livvic', sans-serif;
+	font-family: 'PlusJakartaSans', sans-serif;
 	font-size: 48px;
 	font-style: normal;
 	font-weight: 600;
 	line-height: 60px; 
-	letter-spacing: -0.48px;
+	letter-spacing: 2px;
 	text-transform: capitalize;
+	letter-spacing: -0.48px;
 	color: $--Neutral-800;
 }
 @mixin titleH2{
-font-family: 'Livvic', sans-serif;
+font-family: 'PlusJakartaSans', sans-serif;
 font-size: 40px;
 font-style: normal;
 font-weight: 600;
@@ -19,9 +20,8 @@ text-transform: capitalize;
 color: $--Neutral-800;
 }
 @mixin titleH3{
-font-family: 'Livvic',sans-serif;
+font-family: 'PlusJakartaSans',sans-serif;
 font-size: 22px;
-font-style: normal;
 font-weight: 600;
 line-height: 30px; /* 136.364% */
 text-transform: capitalize;
@@ -37,7 +37,7 @@ text-transform: capitalize;
 color: $--Neutral-800;
 }
 @mixin titleH5{
-font-family: 'Figtree', sans-serif;
+font-family: 'PlusJakartaSans', sans-serif;
 font-size: 22px;
 font-style: normal;
 font-weight: 600;
@@ -46,6 +46,7 @@ text-transform: capitalize;
 color: $--Neutral-800;
 }
 @mixin titleH6{
+	font-family: 'PlusJakartaSans', sans-serif;
 font-size: 18px;
 font-style: normal;
 font-weight: 600;
@@ -58,5 +59,6 @@ color: $--Neutral-800;
 	font-style: normal;
 	font-weight: 500;
 	line-height: 24px;
+	font-family: 'Figtree', sans-serif;
 }
 

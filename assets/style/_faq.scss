@@ -7,6 +7,7 @@
 	&__title{
 		h2{
 			@include titleH2;
+			letter-spacing: 1px;
 			margin-bottom: 64px;
 			text-align: center;
 		}
@@ -23,7 +24,7 @@
 					padding: 12px 48px 12px 16px ;
 				border-radius: 4px;
 				border: 1px solid $--Neutral-500;
-				background-color: $--Neutral-400;
+				background-color: $--white;
 				outline: none;
 				width: 100%;
 				font-size: 16px;

@@ -7,6 +7,7 @@
 		h2{
 			@include titleH2;
 			margin-bottom: 12px;
+			letter-spacing: 1px;
 		}
 		p{
 			@include p1;
@@ -57,6 +58,8 @@
 		}
 		h3{
 			@include titleH3;
+			 letter-spacing: 1px;
+  		color: $--Neutral-800;
 			margin-bottom: 8px;
 		}
 	}

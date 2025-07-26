@@ -1,6 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 		accordionFunction();
+		presentationSlider();
 });
 
 const accordionFunction = () => {
@@ -12,5 +13,29 @@ const accordionFunction = () => {
 				item.classList.toggle("active");
 			});
 		}
+  });
+};
+const presentationSlider = () => {
+  const presentationItems = document.querySelectorAll('.presentation__slider');
+  if (!presentationItems.length) return;
+
+  presentationItems.forEach((presentationItem) => {
+    const presentItem = presentationItem.querySelector('.presentationSlider');
+
+    if (!presentItem) return;
+
+    new Swiper(presentItem, {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: presentationItem.querySelector('.presentation-pagination'),
+        type: 'bullets',
+				clickable: true,
+      },
+      navigation: {
+        nextEl: presentationItem.querySelector('.presentation-button-next'),
+        prevEl: presentationItem.querySelector('.presentation-button-prev'),
+      },
+    });
   });
 };
