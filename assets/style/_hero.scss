@@ -10,7 +10,15 @@
 	&__content{
 		width: calc(50% - 40px);
 		position: relative;
-		&:after{
+		
+		h1{
+			@include titleH1;
+			margin-bottom: 24px;
+			color: $--Neutral-800;
+			z-index: 1;
+			position: relative;
+			text-wrap-style: balance;
+			&:after{
 			content: '';
 			max-width: 168px;
 			max-height: 53px;
@@ -20,15 +28,8 @@
 			left: 3px;
 			top: 5px;
 			background: url('../images/hero-svg.svg') center center / contain no-repeat;
-			z-index: 0;
+			z-index: -1;
 		}
-		h1{
-			@include titleH1;
-			margin-bottom: 24px;
-			color: $--Neutral-800;
-			z-index: 1;
-			position: relative;
-			text-wrap-style: balance;
 		}
 		p{
 			color: $--Neutral-700;
@@ -43,6 +44,14 @@
 		}
 		.btn{
 			font-weight: 500;
+		}
+	}
+	&__btns{
+		display: flex;
+		align-items: center;
+		gap: 24px;
+		.secondary-btn{
+			padding: 12px 32px;
 		}
 	}
 	&__img{

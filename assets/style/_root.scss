@@ -52,6 +52,7 @@ $--Neutral-200: rgba(255, 255, 255, 0.20);
 $--Neutral-50: rgba(255, 255, 255, 0.75);
 $--Neutral-100:  rgba(255, 255, 255, 0.50);
 $--Neutral-600:  rgba(16, 10, 41, 0.50);
+$--Neutral-900: #100A29;
 $--blue:#005687;
 $--orange:#FF8368; 
 $--Accent-50: #FFEEE5;
@@ -135,6 +136,11 @@ body{
 		border-color: transparent;
 		color: $--white;
 	}
+}
+.promo-btn{
+	border: 1px solid $--Neutral-600;
+	background: $--Neutral-100;
+	color: $--Neutral-900;
 }
 .accent-btn{
 	color: $--white;
@@ -318,8 +324,24 @@ blockquote{
 .grid{
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 40px;
+	gap:64px 40px;
 	margin-bottom: 64px;
+}
+.grid-item{
+		display: flex;
+	flex-direction: column;
+	text-align: left;
+	padding-right: 24px;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	div{
+		margin-bottom: 24px;
+	}
+	h3{
+		@include titleH5;
+		margin-bottom: 8px;
+	}
 }
  .simple-block{
 	display: flex;
@@ -344,4 +366,13 @@ blockquote{
 		margin-bottom: 8px;
 	}
 
+ }
+ .explore{
+	&__title{
+		margin-bottom: 64px;
+		h2{
+			@include titleH2;
+		}
+		
+	}
  }

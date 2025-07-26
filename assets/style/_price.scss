@@ -1,0 +1,115 @@
+.price{
+	background-color: $--white;
+	&__title{
+		margin-bottom: 56px;
+	}
+	&__items{
+	display: flex;
+	gap: 16px;
+		flex-wrap: wrap;
+
+	}
+	&__item{
+		display: flex;
+		flex-direction: column;
+		background-color: $--Neutral-400;
+		border-radius: 4px;
+		gap: $--sds-size-space-1600;
+		width: calc(50% - 8px);
+		padding: 32px 24px;
+		height: fit-content;
+		h3{
+			@include titleH5;
+			margin-bottom: 8px;
+		}
+		&__amount{
+			@include titleH1;
+			letter-spacing: -0.48px;
+		}
+	}
+	&__wrap{
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+	}
+	&__list{
+		display: flex;
+		gap: 3px;
+		background-color: rgba(1, 35, 64, 0.05);
+		border-radius: 6px;
+		padding: 3px;
+		max-width: 200px;
+		width: 100%;
+		justify-content: space-between;
+		
+		&__item{
+			padding: 7px 12px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: $--Neutral-700;
+			font-family: 'Figtree';
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 20px; 
+			text-transform: capitalize;
+			border-radius: 4px;
+			transition: .3s linear;	
+			max-width: 95.5px;		
+			width: 100%;
+			cursor: pointer;
+			&.active{
+				background-color: $--white;
+				box-shadow: 0 1px 3px 0 rgba(1, 35, 64, 0.15);
+				&:hover{
+				background-color: $--white;
+				color: $--Neutral-700;
+			}
+			}
+			&:hover{
+				background-color: $--Primary-200;
+				color: $--white;
+			}
+		}
+	}
+	&__content{
+		&__wrap{
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
+		}
+	}
+	&__value{
+		display: flex;
+		gap: 8px;
+		align-items: center;
+		&__actual,
+		&__old{
+			font-family: "Livvic";
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 26px; /* 144.444% */
+			text-transform: capitalize;
+		}
+		&__old{
+			text-decoration-line: line-through;
+			text-transform: capitalize;
+			color: $--Neutral-600;
+		}
+		&__badge{
+			border-radius: 4px;
+			background: #D1FAE4;
+			padding: 6px 12px;
+			align-items: center;
+			gap: 4px;
+			color:  #0E7D42;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 20px; /* 142.857% */
+			text-transform: capitalize;
+		}
+	}
+}
