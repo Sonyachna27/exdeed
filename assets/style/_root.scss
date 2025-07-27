@@ -43,15 +43,17 @@
 
 
 $--white: #fff;
-$--Neutral-800: #100A29; 
-$--Neutral-700: rgba(16, 10, 41, 0.75);
-$--Neutral-400: rgba(16, 10, 41, 0.04);
-$--Neutral-300: rgba(255, 255, 255, 0.05);
-$--Neutral-500: rgba(16, 10, 41, 0.15);
-$--Neutral-200: rgba(255, 255, 255, 0.20);
+
 $--Neutral-50: rgba(255, 255, 255, 0.75);
 $--Neutral-100:  rgba(255, 255, 255, 0.50);
+$--Neutral-200: rgba(255, 255, 255, 0.20);
+$--Neutral-300: rgba(255, 255, 255, 0.05);
+$--Neutral-400: rgba(16, 10, 41, 0.04);
+$--Neutral-500: rgba(16, 10, 41, 0.15);
+$--Neutral-550: rgba(16, 10, 41, 0.25);
 $--Neutral-600:  rgba(16, 10, 41, 0.50);
+$--Neutral-700: rgba(16, 10, 41, 0.75);
+$--Neutral-800: #100A29; 
 $--Neutral-900: #100A29;
 $--blue:#005687;
 $--orange:#FF8368; 
@@ -127,9 +129,9 @@ body{
 }
 
 .secondary-btn{
-	background-color: $--white;
+	background-color: $--Neutral-100;
 	color: $--Neutral-800;
-	border-color: $--Neutral-500;
+	border-color: $--Neutral-550;
 	padding: 8px 23px;
 	&:hover{
 		background-color: $--Neutral-800;		
@@ -261,11 +263,16 @@ blockquote{
 	 position: relative;
 	 cursor: pointer;
 }
+.dropdown-toggle{
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
  .dropdown-list {
 	 display: flex;
 	 flex-direction: column;
 	 background: #fff;
-	 box-shadow: 0px 4px 8px 3px #000 26;
+	 box-shadow: 0px 4px 8px 3px #000 26px;
 	 border-radius: 4px;
 	 gap: 0;
 	 padding: 8px;
@@ -375,4 +382,93 @@ blockquote{
 		}
 		
 	}
+ }
+ .faq__search__wrap{
+	form{
+			max-width: 400px;
+				width: 100%;
+			div {
+				position: relative;
+				input{
+				padding: 12px 48px 12px 16px ;
+				border-radius: 4px;
+				border: 1px solid $--Neutral-500;
+				background-color: $--white;
+				outline: none;
+				width: 100%;
+				font-size: 16px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 24px;
+					color: $--Neutral-600;
+				&::placeholder{
+					font-size: 16px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 24px;
+					color: $--Neutral-600;
+					opacity: 1;
+				}
+				&:active,
+				&:focus{
+					border-color: $--Neutral-800;
+				}
+				}
+				&:after{
+					content: '';
+					width: 24px;
+					height: 24px;
+					position: absolute;
+					top: 0;
+					right: 16px;
+					transform: translateY(50%);
+					background: url('../images/search\).svg') center center / cover no-repeat;
+				}
+			}
+		}
+ }
+ .news__search{
+	max-width: 400px;
+				width: 100%;
+	form{
+			width: 100%;
+			div {
+				position: relative;
+				input{
+				padding:12px 12px 12px 48px ;
+				border-radius: 4px;
+				border: 1px solid $--Neutral-500;
+				background-color: $--white;
+				outline: none;
+				width: 100%;
+				font-size: 16px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 24px;
+					color: $--Neutral-600;
+				&::placeholder{
+					font-size: 16px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 24px;
+					color: $--Neutral-600;
+					opacity: 1;
+				}
+				&:active,
+				&:focus{
+					border-color: $--Neutral-800;
+				}
+				}
+				&:after{
+					content: '';
+					width: 24px;
+					height: 24px;
+					position: absolute;
+					top: 0;
+					left: 16px;
+					transform: translateY(50%);
+					background: url('../images/search\).svg') center center / cover no-repeat;
+				}
+			}
+		}
  }

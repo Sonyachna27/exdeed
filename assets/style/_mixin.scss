@@ -19,6 +19,16 @@ letter-spacing: -0.4px;
 text-transform: capitalize;
 color: $--Neutral-800;
 }
+@mixin tilteH3-big{
+	color: $--Neutral-800;
+	font-family: "PlusJakartaSans";
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 40px;
+	letter-spacing: -0.32px;
+	text-transform: capitalize;
+}
 @mixin titleH3{
 font-family: 'PlusJakartaSans',sans-serif;
 font-size: 22px;

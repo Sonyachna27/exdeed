@@ -51,14 +51,22 @@
 		align-items: center;
 		gap: 24px;
 		.secondary-btn{
+			background-color: $--Neutral-100;
+			color: $--Neutral-800;
+			border-color: $--Neutral-550;
+			padding: 8px 23px;
 			padding: 12px 32px;
+			&:hover{
+				background-color: $--Neutral-800;		
+				border-color: transparent;
+				color: $--white;
+			}
 		}
 	}
 	&__img{
 		width: calc(50% - 32px);
 		max-width: 608px;
 		max-height: 460px;
-		width: 100%;
 		border-radius: 32px 20px 20px 20px;
 		img{
 			width: 100%;
