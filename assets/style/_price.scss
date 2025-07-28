@@ -2,6 +2,14 @@
 	background-color: $--white;
 	&__title{
 		margin-bottom: 56px;
+		align-items: baseline;
+		p{
+			margin-top: 22px;
+			width: calc(50% - 10px);
+		}
+		h2{
+			width: calc(50% - 10px);
+		}
 	}
 	&__items{
 	display: flex;
@@ -26,6 +34,11 @@
 			@include titleH1;
 			letter-spacing: -0.48px;
 		}
+		&--monitoring{
+				.secondary-btn{
+					padding: 12px 32px;
+				}
+			}
 	}
 	&__wrap{
 		display: flex;
@@ -71,6 +84,7 @@
 				background-color: $--Primary-200;
 				color: $--white;
 			}
+			
 		}
 	}
 	&__content{
@@ -112,4 +126,5 @@
 			text-transform: capitalize;
 		}
 	}
+	
 }

@@ -1,0 +1,15 @@
+.related{
+	padding: 60px 0 120px 0;
+	&__container{
+		display: flex;
+	flex-direction: column;
+	gap: 40px;
+	}
+	&__title{
+		h2{
+			@include tilteH3-big;
+			letter-spacing: -0.32px;
+
+		}
+	}
+}

@@ -1,4 +1,6 @@
 .article{
+	max-width: 1240px;
+	margin: 0 auto;
 	&__title{
 		&__wrap{
 			display: flex;
@@ -6,6 +8,10 @@
 			gap: 24px;
 			max-width: 560px;
 			margin: 0 auto;
+			.article-back{
+				max-height: 24px;
+
+			}
 			h1{
 				@include titleH2;
 				letter-spacing: -0.4px;
@@ -34,16 +40,26 @@
 			}
 			.article__wrap &{
 				flex-direction: column;
-				position: sticky;
+				position: absolute;
 				left: 0;
-				top: 120px;
+				top: 40px;
 				height: fit-content;
+			}
+		}
+		&__img{
+			max-height: 300px;
+			height: 100%;
+			img{
+				width: 100%;
+				height: 100%;
+				max-height: inherit;
+				object-fit: cover;
 			}
 		}
 		&__wrap{
 			display: flex;
 			padding: 40px 0 60px 0;
-
+		position: relative;
 		}
 		&__content{
 			max-width: 560px;
@@ -51,14 +67,43 @@
 			margin: 0 auto;
 			display: flex;
 			flex-direction: column;
-			gap: 40px;
 			color: $--Neutral-800;
-			ul{
-				list-style:disc;
-				list-style-position: inside;
+			p{
+				&:not(:nth-last-of-type(1)){
+					margin-bottom: 22px;
+				}
+				&:has(+ h2, h3, h4, h5){
+					margin-bottom: 40px;
+				}
 			}
-			h3{
+			ul{
+				margin-bottom: 40px;
+				list-style-type: disc;
+				list-style-position: outside;
+				padding-left: 23px;
+
+				li{
+					position: relative;
+					
+					// &::before{
+					// 	content: '';
+					// 	width: 1px;
+					// 	height: 1px;
+					// 	position: absolute;
+					// 	top: 12px;
+					// 	left: 10px;
+					// 	// font-size: 16px;
+					// 	// font-style: normal;
+					// 	// font-weight: 400;
+					// 	// line-height: 24px;
+
+					// }
+				}
+			}
+			h2{
 				@include titleH6;
+			
+				margin-bottom: 24px;
 			}
 		}
 }

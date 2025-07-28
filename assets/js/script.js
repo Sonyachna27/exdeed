@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		accordionFunction();
 		presentationSlider();
 		openTabs();
+		newsSlider();
 });
 
 const accordionFunction = () => {
@@ -36,6 +37,23 @@ const presentationSlider = () => {
       navigation: {
         nextEl: presentationItem.querySelector('.presentation-button-next'),
         prevEl: presentationItem.querySelector('.presentation-button-prev'),
+      },
+    });
+  });
+};
+const newsSlider = () => {
+  const newsItems = document.querySelectorAll('.news__slider');
+  if (!newsItems.length) return;
+
+  newsItems.forEach((newsItem) => {
+    const presentItem = newsItem.querySelector('.newsSlider');
+    if (!presentItem) return;
+    new Swiper(presentItem, {
+      slidesPerView: 3,
+      spaceBetween:24,
+      navigation: {
+        nextEl: newsItem.querySelector('.news-button-next'),
+        prevEl: newsItem.querySelector('.news-button-prev'),
       },
     });
   });
